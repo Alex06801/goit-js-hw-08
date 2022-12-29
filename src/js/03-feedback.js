@@ -2,7 +2,7 @@ import throttle from 'lodash.throttle';
 
 const FEEDBACK_FORM_STATE = 'feedback-form-state';
 
-let saveLocalData = {}; //сохранить обьект с данными
+let saveLocalData = {};
 
 const refs = {
   form: document.querySelector('.feedback-form'),
@@ -38,9 +38,8 @@ function handleSubmit(event) {
 }
 
 function removeLocalStorage() {
-  saveLocalData = { email: '', message: '' }; //Обьект по умолчанию
-  localStorage.removeItem(FEEDBACK_FORM_STATE); //Удаляем информацию из лок хранилища
-  console.log(saveLocalData);
+  saveLocalData = { email: '', message: '' };
+  localStorage.removeItem(FEEDBACK_FORM_STATE);
 }
 
 function saveLocalStorage(event) {
